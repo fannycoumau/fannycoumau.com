@@ -1,10 +1,10 @@
 @media screen and (max-width: 600px) {
     .main {
         flex-direction: column;
+        height: auto;
     }
 
     .resume {
         overflow: inherit;
-        height: 30vh;
     }
 }
