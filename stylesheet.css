@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    color: #787878;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.profile {
+    flex: 1;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1505676721360-6f297d3e2b64?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=53aac91f232045ad8fabc759d177bdd2&auto=format&fit=crop&w=633&q=80);
+    background-size: cover;
+    background-position: center center;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.resume {
+    flex: 2;
+    overflow: scroll;
+    padding: 20px;
+    padding-top: 10px;
+    text-align: justify;
+}
