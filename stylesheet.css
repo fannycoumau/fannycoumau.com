@@ -23,7 +23,7 @@ p {
 .profile {
     flex: 1;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1505676721360-6f297d3e2b64?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=53aac91f232045ad8fabc759d177bdd2&auto=format&fit=crop&w=633&q=80);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
     background-size: cover;
     background-position: center center;
     padding: 30px;
@@ -33,7 +33,7 @@ p {
     flex-direction: column;
     text-align: right;
     font-size: 20px;
-    box-shadow: inset -25px 0 35px -10px black;
+    box-shadow: inset -7px 0 40px -12px black;
 }
 
 .profile h1 {
