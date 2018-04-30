@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+p {
+    line-height: 1.35em;
+}
+
 .main {
     display: flex;
     height: 100vh;
@@ -22,18 +26,91 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1505676721360-6f297d3e2b64?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=53aac91f232045ad8fabc759d177bdd2&auto=format&fit=crop&w=633&q=80);
     background-size: cover;
     background-position: center center;
-    padding: 10px;
+    padding: 30px;
     color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: right;
+    font-size: 20px;
+    box-shadow: inset -25px 0 35px -10px black;
+}
+
+.profile h1 {
+    margin-top: 0;
+}
+
+.profile-picture {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
 }
 
 .resume {
     flex: 2;
     overflow: scroll;
-    padding: 20px;
-    padding-top: 10px;
     text-align: justify;
+}
+
+.resume hr {
+    border: 1px solid #f1f1f1;
+    width: 40%;
+    margin-left: 0;
+}
+
+.preface {
+    margin-top: 100px;
+    padding: 80px;
+}
+
+.resume-item {
+    padding: 30px 50px;
+}
+
+.resume-item h2 {
+    padding: 30px;
+    padding-bottom: 10px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    font-size: 1.9em;
+}
+
+.resume-item h2 span {
+    position: relative;
+}
+
+.resume-item h2:before {
+    content: "";
+    position: absolute;
+    top: 67%;
+    bottom: 10%;
+    left: 30px;
+    right: 40%;
+    background: linear-gradient(45deg, #00ac53, #23c3e0);
+    transition: right 0.5s ease-in-out;
+}
+
+.resume-item:nth-child(3) h2:before {
+    background: linear-gradient(45deg, #AA5E82, #E3659B);
+}
+
+.resume-item:nth-child(4) h2:before {
+    background: linear-gradient(45deg, #b9a80a, #f6e655);
+}
+
+.resume-item:nth-child(6) h2:before {
+    background: linear-gradient(45deg, #AA5E82, #E3659B);
+}
+
+.resume-item:hover h2:before {
+    right: 20%;
+}
+
+.resume-item:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.resume-item p {
+    padding: 20px 30px 0;
 }
