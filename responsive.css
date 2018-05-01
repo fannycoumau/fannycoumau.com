@@ -7,4 +7,13 @@
     .resume {
         overflow: inherit;
     }
+
+    .formation {
+        flex-direction: column;
+    }
+
+    .formation li {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
