@@ -1,9 +1,15 @@
+:root {
+    --main-color: #787878;
+    --main-bg-color: #fefefe;
+}
+
 body {
     margin: 0;
-    color: #787878;
+    color: var(--main-color);
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 18px;
+    background-color: var(--main-bg-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +24,20 @@ p {
 .main {
     display: flex;
     height: 100vh;
+}
+
+.buzz span {
+    border-radius: 3px;
+    background-color: white;
+    color: var(--main-color);
+    padding: 3px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.social a {
+    margin-left: 5px;
+    font-size: 1.2em;
 }
 
 .profile {
@@ -36,8 +56,12 @@ p {
     box-shadow: inset -7px 0 40px -12px black;
 }
 
-.profile h1 {
-    margin-top: 0;
+.profile a {
+    color: white;
+}
+
+.profile .headline {
+    font-size: 1.4em;
 }
 
 .profile-picture {
@@ -47,24 +71,100 @@ p {
 }
 
 .resume {
-    flex: 2;
+    flex: 2.5;
     overflow: scroll;
     text-align: justify;
+}
+
+.formation {
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+}
+
+.formation li {
+    flex: 1;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 2px #ccc;
+    transition: all 0.2s ease-in-out;
+}
+
+.formation li:hover {
+    box-shadow: 0px 10px 20px 5px #ccc;
+    transform: translateY(-10px);
+}
+
+.formation li h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.formation li h3 small {
+    font-size: 0.7em;
+}
+
+.formation li h3 span {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.formation li:first-child {
+    margin-left: 0;
+}
+
+.formation li:last-child {
+    margin-right: 0;
 }
 
 .resume hr {
     border: 1px solid #f1f1f1;
     width: 40%;
     margin-left: 0;
+    margin-bottom: 40px;
 }
 
 .preface {
     margin-top: 100px;
     padding: 80px;
+    padding-bottom: 0;
 }
 
 .resume-item {
     padding: 30px 50px;
+    position: relative;
+    --timeline: #ccc;
+}
+
+/* Line of our timeline */
+.resume-item:before {
+    content: "";
+    position: absolute;
+    background-color: var(--timeline);
+    top: 0;
+    bottom: 0;
+    left: 45px;
+    width: 3px;
+}
+
+/* Circle of our timeline */
+.resume-item h2:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--timeline);
+    border: 7px solid var(--main-bg-color);
+    left: -20px;
+    top: 33px;
+}
+
+/* First resume item */
+.preface + .resume-item:before {
+    top: 65px;
 }
 
 .resume-item h2 {
@@ -80,6 +180,7 @@ p {
     position: relative;
 }
 
+/* Line of color under mission title */
 .resume-item h2:before {
     content: "";
     position: absolute;
@@ -105,10 +206,6 @@ p {
 
 .resume-item:hover h2:before {
     right: 20%;
-}
-
-.resume-item:nth-child(even) {
-    background-color: #f1f1f1;
 }
 
 .resume-item p {
