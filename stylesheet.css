@@ -36,7 +36,6 @@ small {
 .main {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
 }
 
 .buzz span {
@@ -51,23 +50,31 @@ small {
 .social a {
     margin-left: 5px;
     font-size: 1.2em;
+    color: white;
+}
+
+.profile-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
+    background-size: cover;
+    background-position: center center;
+    color: white;
 }
 
 .profile {
     flex: 1;
     min-height: 100vh;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
-    background-size: cover;
-    background-position: center center;
-    padding: 30px;
-    color: white;
+    padding: 30px 28%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: right;
-    font-size: 20px;
+    text-align: justify;
+    font-size: 1.1em;
     box-shadow: inset -7px 0 40px -12px black;
+}
+
+.profile-picture + p {
+    margin: 0;
 }
 
 .profile a {
@@ -76,12 +83,34 @@ small {
 
 .profile .headline {
     font-size: 1.4em;
+    display: block;
+    margin-bottom: 30px;
 }
 
 .profile-picture {
+    text-align: right;
+    margin: 0;
+}
+
+.profile-picture img {
     width: 170px;
     height: 170px;
     border-radius: 50%;
+}
+
+.profile-pinned {
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    padding: 10px 30px;
+    transition: top 0.2s ease-in-out;
+    z-index: 10;
+    font-weight: bold;
+    text-align: right;
+}
+
+.profile-pinned .social {
+    float: left;
 }
 
 .resume {
@@ -199,6 +228,14 @@ small {
     display: block;
 }
 
+.resume-item ul {
+    margin-top: 50px;
+}
+
+.resume-item li {
+    margin-top: 10px;
+}
+
 /* Line of color under mission title */
 .resume-item h2:before {
     content: "";
@@ -221,6 +258,10 @@ small {
 
 .resume-item:nth-child(6) h2:before {
     background: linear-gradient(45deg, #AA5E82, #E3659B);
+}
+
+.resume-item:nth-child(7) h2:before {
+    background: linear-gradient(45deg, #b9a80a, #f6e655);
 }
 
 .resume-item:hover h2:before {
