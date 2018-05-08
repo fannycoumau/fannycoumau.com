@@ -1,6 +1,11 @@
 :root {
-    --main-color: #787878;
+    --main-title-color: #313131;
+    --main-color: #838C95;
     --main-bg-color: #fefefe;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 body {
@@ -13,17 +18,25 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: var(--main-title-color);
+    text-align: left;
 }
 
 p {
-    line-height: 1.35em;
+    line-height: 1.55em;
+    word-spacing: 0.1em;
+}
+
+small {
+    font-size: 0.7em;
 }
 
 .main {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    /* height: 100vh; */
 }
 
 .buzz span {
@@ -42,6 +55,7 @@ p {
 
 .profile {
     flex: 1;
+    min-height: 100vh;
 
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
     background-size: cover;
@@ -72,8 +86,9 @@ p {
 
 .resume {
     flex: 2.5;
-    overflow: scroll;
     text-align: justify;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .formation {
@@ -102,10 +117,6 @@ p {
     margin-top: 0;
 }
 
-.formation li h3 small {
-    font-size: 0.7em;
-}
-
 .formation li h3 span {
     color: #aaa;
     font-weight: 400;
@@ -127,7 +138,6 @@ p {
 }
 
 .preface {
-    margin-top: 100px;
     padding: 80px;
     padding-bottom: 0;
 }
@@ -136,6 +146,8 @@ p {
     padding: 30px 50px;
     position: relative;
     --timeline: #ccc;
+    width: 70%;
+    margin: 0 auto;
 }
 
 /* Line of our timeline */
@@ -153,13 +165,13 @@ p {
 .resume-item h2:after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--timeline);
     border: 7px solid var(--main-bg-color);
-    left: -20px;
-    top: 33px;
+    left: -21px;
+    top: 31px;
 }
 
 /* First resume item */
@@ -173,21 +185,28 @@ p {
     margin: 0;
     position: relative;
     display: inline-block;
-    font-size: 1.9em;
 }
 
-.resume-item h2 span {
+.resume-item h2 > span {
     position: relative;
+}
+
+.resume-item .subtitle, .resume-item small {
+    font-weight: 300;
+}
+
+.resume-item .subtitle {
+    display: block;
 }
 
 /* Line of color under mission title */
 .resume-item h2:before {
     content: "";
     position: absolute;
-    top: 67%;
-    bottom: 10%;
+    bottom: 2%;
     left: 30px;
-    right: 40%;
+    right: 78%;
+    height: 20px;
     background: linear-gradient(45deg, #00ac53, #23c3e0);
     transition: right 0.5s ease-in-out;
 }
@@ -205,7 +224,7 @@ p {
 }
 
 .resume-item:hover h2:before {
-    right: 20%;
+    right: 50%;
 }
 
 .resume-item p {
