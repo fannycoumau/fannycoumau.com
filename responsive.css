@@ -5,7 +5,15 @@
     }
 
     .resume {
-        overflow: inherit;
+        width: 100%;
+    }
+
+    .resume-item {
+        width: 100%;
+    }
+
+    .preface {
+        padding: 30px;
     }
 
     .formation {
