@@ -4,6 +4,10 @@
         height: auto;
     }
 
+    .profile {
+        padding: 30px;
+    }
+
     .resume {
         width: 100%;
     }
