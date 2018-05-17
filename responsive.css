@@ -16,7 +16,7 @@
         width: 100%;
     }
 
-    .preface {
+    .section {
         padding: 30px;
     }
 
@@ -27,5 +27,9 @@
     .formation li {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .lang {
+        width: 30%;
     }
 }
