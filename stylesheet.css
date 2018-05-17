@@ -54,7 +54,7 @@ small {
 }
 
 .profile-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
     background-size: cover;
     background-position: center center;
     color: white;
@@ -88,21 +88,27 @@ small {
 }
 
 .profile-picture {
-    text-align: right;
     margin: 0;
+    margin-left: calc(100% - 170px);
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    overflow: hidden;
+    transform: rotate(-10deg)
 }
 
 .profile-picture img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
+    width: 100%;
+    position: relative;
+    top: -20%;
+    transform: scaleX(-1);
 }
 
 .profile-pinned {
     position: fixed;
     top: -100px;
     width: 100%;
-    padding: 10px 30px;
+    padding: 5px 30px;
     transition: top 0.2s ease-in-out;
     z-index: 10;
     font-weight: bold;
@@ -118,6 +124,7 @@ small {
     text-align: justify;
     width: 70%;
     margin: 0 auto;
+    padding-top: 80px;
 }
 
 .formation {
@@ -125,6 +132,7 @@ small {
     padding-left: 0;
     margin-top: 0;
     list-style: none;
+    hyphens: auto;
 }
 
 .formation li {
@@ -144,6 +152,7 @@ small {
 .formation li h3 {
     text-align: center;
     margin-top: 0;
+    hyphens: none;
 }
 
 .formation li h3 span {
@@ -159,20 +168,38 @@ small {
     margin-right: 0;
 }
 
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding-bottom: 30px;
+}
+
+.lang {
+    width: 15%;
+    padding-left: 6%;
+}
+
+.c100 .bar,
+.c100 .fill {
+  border-color: #610141 !important;
+}
+.c100:hover > span {
+  color: #610141;
+}
+
 .resume hr {
     border: 1px solid #f1f1f1;
     width: 40%;
     margin-left: 0;
-    margin-bottom: 40px;
-}
-
-.preface {
-    padding: 80px;
-    padding-bottom: 0;
+    margin-top: 40px;
 }
 
 .resume-item {
     padding: 30px 50px;
+    padding-top: 0;
     position: relative;
     --timeline: #ccc;
     width: 70%;
@@ -204,7 +231,7 @@ small {
 }
 
 /* First resume item */
-.preface + .resume-item:before {
+.section .resume-item:first-of-type:before {
     top: 65px;
 }
 
@@ -249,19 +276,31 @@ small {
 }
 
 .resume-item:nth-child(3) h2:before {
-    background: linear-gradient(45deg, #AA5E82, #E3659B);
+    background: linear-gradient(45deg, rgb(100, 72, 105), #E3659B);
 }
 
 .resume-item:nth-child(4) h2:before {
-    background: linear-gradient(45deg, #b9a80a, #f6e655);
+    background: linear-gradient(45deg, #000046, #1cb5e0);
+}
+
+.resume-item:nth-child(5) h2:before {
+    background: linear-gradient(45deg, #d9a7c7, #fffcdc);
 }
 
 .resume-item:nth-child(6) h2:before {
-    background: linear-gradient(45deg, #AA5E82, #E3659B);
+    background: linear-gradient(45deg, #1c92d2, #f2fcfe);
 }
 
 .resume-item:nth-child(7) h2:before {
-    background: linear-gradient(45deg, #b9a80a, #f6e655);
+    background: linear-gradient(45deg, #920648, #f08caa);
+}
+
+.resume-item:nth-child(8) h2:before {
+    background: linear-gradient(45deg, #005aa7, #fffde4);
+}
+
+.resume-item:nth-child(9) h2:before {
+    background: linear-gradient(45deg, #f05053, #e1eec3);
 }
 
 .resume-item:hover h2:before {
