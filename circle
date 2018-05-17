@@ -1,0 +1,312 @@
+:root {
+    --main-title-color: #313131;
+    --main-color: #838C95;
+    --main-bg-color: #fefefe;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--main-color);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: var(--main-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: var(--main-title-color);
+    text-align: left;
+}
+
+p {
+    line-height: 1.55em;
+    word-spacing: 0.1em;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.buzz span {
+    border-radius: 3px;
+    background-color: white;
+    color: var(--main-color);
+    padding: 3px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.social a {
+    margin-left: 5px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.profile-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1516846331602-2552ac71b7fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f42c9d6b5cfa4d4f733f02e8b93573d&auto=format&fit=crop&w=1118&q=80);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+.profile {
+    flex: 1;
+    min-height: 100vh;
+
+    padding: 30px 28%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 1.1em;
+    box-shadow: inset -7px 0 40px -12px black;
+}
+
+.profile-picture + p {
+    margin: 0;
+}
+
+.profile a {
+    color: white;
+}
+
+.profile .headline {
+    font-size: 1.4em;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    margin: 0;
+    margin-left: calc(100% - 170px);
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    overflow: hidden;
+    transform: rotate(-10deg)
+}
+
+.profile-picture img {
+    width: 100%;
+    position: relative;
+    top: -20%;
+    transform: scaleX(-1);
+}
+
+.profile-pinned {
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    padding: 5px 30px;
+    transition: top 0.2s ease-in-out;
+    z-index: 10;
+    font-weight: bold;
+    text-align: right;
+}
+
+.profile-pinned .social {
+    float: left;
+}
+
+.resume {
+    flex: 2.5;
+    text-align: justify;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.formation {
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    hyphens: auto;
+}
+
+.formation li {
+    flex: 1;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 2px #ccc;
+    transition: all 0.2s ease-in-out;
+}
+
+.formation li:hover {
+    box-shadow: 0px 10px 20px 5px #ccc;
+    transform: translateY(-10px);
+}
+
+.formation li h3 {
+    text-align: center;
+    margin-top: 0;
+    hyphens: none;
+}
+
+.formation li h3 span {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.formation li:first-child {
+    margin-left: 0;
+}
+
+.formation li:last-child {
+    margin-right: 0;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding-bottom: 30px;
+}
+
+.lang {
+    width: 15%;
+    padding-left: 6%;
+}
+
+.c100 .bar,
+.c100 .fill {
+  border-color: #610141 !important;
+}
+.c100:hover > span {
+  color: #610141;
+}
+
+.resume hr {
+    border: 1px solid #f1f1f1;
+    width: 40%;
+    margin-left: 0;
+    margin-top: 40px;
+}
+
+.resume-item {
+    padding: 30px 50px;
+    padding-top: 0;
+    position: relative;
+    --timeline: #ccc;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Line of our timeline */
+.resume-item:before {
+    content: "";
+    position: absolute;
+    background-color: var(--timeline);
+    top: 0;
+    bottom: 0;
+    left: 45px;
+    width: 3px;
+}
+
+/* Circle of our timeline */
+.resume-item h2:after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--timeline);
+    border: 7px solid var(--main-bg-color);
+    left: -21px;
+    top: 31px;
+}
+
+/* First resume item */
+.section .resume-item:first-of-type:before {
+    top: 65px;
+}
+
+.resume-item h2 {
+    padding: 30px;
+    padding-bottom: 10px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.resume-item h2 > span {
+    position: relative;
+}
+
+.resume-item .subtitle, .resume-item small {
+    font-weight: 300;
+}
+
+.resume-item .subtitle {
+    display: block;
+}
+
+.resume-item ul {
+    margin-top: 50px;
+}
+
+.resume-item li {
+    margin-top: 10px;
+}
+
+/* Line of color under mission title */
+.resume-item h2:before {
+    content: "";
+    position: absolute;
+    bottom: 2%;
+    left: 30px;
+    right: 78%;
+    height: 20px;
+    background: linear-gradient(45deg, #00ac53, #23c3e0);
+    transition: right 0.5s ease-in-out;
+}
+
+.resume-item:nth-child(3) h2:before {
+    background: linear-gradient(45deg, rgb(100, 72, 105), #E3659B);
+}
+
+.resume-item:nth-child(4) h2:before {
+    background: linear-gradient(45deg, #000046, #1cb5e0);
+}
+
+.resume-item:nth-child(5) h2:before {
+    background: linear-gradient(45deg, #d9a7c7, #fffcdc);
+}
+
+.resume-item:nth-child(6) h2:before {
+    background: linear-gradient(45deg, #1c92d2, #f2fcfe);
+}
+
+.resume-item:nth-child(7) h2:before {
+    background: linear-gradient(45deg, #920648, #f08caa);
+}
+
+.resume-item:nth-child(8) h2:before {
+    background: linear-gradient(45deg, #005aa7, #fffde4);
+}
+
+.resume-item:nth-child(9) h2:before {
+    background: linear-gradient(45deg, #f05053, #e1eec3);
+}
+
+.resume-item:hover h2:before {
+    right: 50%;
+}
+
+.resume-item p {
+    padding: 20px 30px 0;
+}
